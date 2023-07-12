@@ -1,0 +1,26 @@
+n=5
+
+....  *
+...  * *
+..  * * *
+.  * * * *
+  * * * * *
+
+
+. * * * * 6,n=5,j=4 
+.. * * *7,n=5,j=3
+... * *8,n=5,j=2
+.... *9,n=5,j=1
+
+i,j,n
+
+//row 2*n-1 
+if(i<=5)
+//upper part
+//space n-i
+//star j<=i
+else
+//lower part
+//space i-n
+
+//star j=1;j<n*2-i;

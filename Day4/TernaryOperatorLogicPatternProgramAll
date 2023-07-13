@@ -1,0 +1,107 @@
+public class patterns {
+    public static void main(String[] args) {
+        pattern1(5);
+        pattern2(5);
+        pattern3(5);
+        pattern4(5);
+        pattern5(5);
+        pattern6(5);
+    }
+
+    static void pattern1(int n) {
+        System.out.println("pattern1:");
+        for (int i = 1; i <= n; i++) {
+            for (int j = 1; j <= i; j++) {
+                System.out.print("* ");
+            }
+            System.out.println("");
+        }
+    }
+
+    static void pattern2(int r) {
+        System.out.println("pattern 2:");
+        for (int i = 1; i <= r; i++) {
+            for (int j = 1; j <= r + 1 - i; j++) {
+                System.out.print("* ");
+            }
+            System.out.println("");
+        }
+    }
+
+    static void pattern3(int n) {
+        System.out.println("pattern3:");
+        for (int i = 1; i <= (2 * n - 1); i++) {
+            if (i <= 5) {
+                for (int j = 1; j <= i; j++) {
+                    System.out.print("* ");
+                }
+                System.out.println("");
+            } else {
+                for (int j = 1; j <= 2 * n - i; j++) {
+                    System.out.print("* ");
+                }
+                System.out.println("");
+            }
+        }}
+    static void pattern4 ( int n)
+    {
+        System.out.println("pattern4:");
+        for (int i = 1; i <= 2 * n - 1; i++)
+        {
+            int c= i>n ? 2*n-i : i;
+            
+            int space=n-c;
+            for (int s = 1; s <=space; s++)
+            {
+                System.out.print(".");
+            }
+            for (int j = 1; j <=c ; j++)
+            {
+                System.out.print("* ");
+            }
+            System.out.println("");
+        }
+    }
+    static void pattern5(int n)
+    {
+        System.out.println("patter5:");
+        for (int i = 1; i <=n; i++) {
+            for (int s = 1; s <=n-i ; s++)
+            {
+                System.out.print("  ");
+            }
+            for (int j = i; j >=1 ; j--) {
+                System.out.print(j + " ");
+            }
+            for (int j = 2; j <=i; j++)
+            {
+                System.out.print(j + " ");
+            }
+            System.out.println("");
+            
+        }
+    }
+
+    static void pattern6(int n)
+    {
+        System.out.println("pattern6:");
+        for (int i = 1; i <=2*n-1 ; i++)
+        {
+            int c=i>n?2*n-i:i;
+
+            for (int j = 1; j <=c; j++) {
+                System.out.print("* ");
+            }
+            int space=i>n?2*i-2*n:2*n-2*i;
+            for (int s = 1; s <=space; s++) {
+                System.out.print("  ");
+            }
+
+            for (int j = 1; j <=c ; j++) {
+                System.out.print("* ");
+            }
+            System.out.println("");
+        }
+    }
+    
+}

@@ -1,0 +1,55 @@
+* ................* //8
+* * ............* * //6
+* * * ........* * * //4
+* * * * ....* * * * //2
+* * * * * * * * * * 
+
+* * * * * * * * * * //0  0
+* * * *     * * * * //4  2
+* * *         * * * //8  4
+* *             * * //12 6
+*                 * //16 8
+
+n=5
+upper part:
+//row i<=n
+
+pattern1
+
+
+//col  j<=i
+//print(*)
+
+pattern space
+//n*2-i*2
+print(..)
+
+pattern2
+
+//col j<=i
+//print(*)
+
+lower triangle:
+
+//row i<=n
+pattern 3
+
+//col j<=n-i+1
+//print(*)
+
+//space
+ k=2;k<=i*2 -1;k++
+ print(..)
+
+//patern4
+
+//col j<n-i
+//print(*)
+
+
+
+
+
+
+
+

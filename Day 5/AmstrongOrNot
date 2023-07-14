@@ -1,0 +1,25 @@
+class HelloWorld {
+    public static void main(String[] args) {
+        int n=153;
+        int dummy=n;
+        int mod;
+        int cube;
+        int sum=0;
+        while(n>0)
+        {
+            mod=n%10;
+            cube=mod*mod*mod;
+            sum=sum+cube;
+            n=n/10;
+        }
+        if(dummy==sum)
+        {
+            System.out.println("ams");
+        }
+        else
+        {
+            System.out.println("not ams");
+        }
+        
+    }
+}

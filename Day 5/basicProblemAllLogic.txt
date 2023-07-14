@@ -1,0 +1,120 @@
+1.Java Program to Check Even or Odd Integers -->ok
+2.Java Program to sum of the digit -->ok
+3.Java Program to reverse a number -->ok 
+4.Java Program to Display All Prime Numbers from 1 to N
+5.Java Program to Check Leap Year -->ok
+6.Java Program to Check Armstrong Number -->ok
+7.Java Program to Check whether the input number is a Neon Number -->ok
+8.Java Program to Find Factorial of a number -->ok
+9.Java Program to Find Fibonacci Series Till number N -->ok
+10.C Program to Print the ASCII Value of a Character
+
+
+
+
+prg 1:
+
+2%2==0
+even 
+3%2==1
+
+odd
+
+1
+2
+3
+4
+5
+6
+-------------------------
+
+prg 2:
+
+n=123
+1+2+3=6
+
+while(n>0)
+{
+		
+}
+123%10=3
+123/10=12
+12%10=2
+12/10=1
+1%10=1
+1/10=0
+-----------------------------
+
+
+prg 3:
+n=123   3
+
+o/p:321
+
+d=0
+
+n=1
+while(n>0)
+
+rem=n%10
+
+d=d*10+rem   d=3,d=32,d=321
+n=n/10;
+
+-----------------------------------
+
+prg 4:(prime number)
+ 0 and 1 
+
+2
+
+n=10
+
+2 to 7(N)
+
+if(n%i==0)
+{
+	not prime
+}
+
+10
+
+2,3,4,5,6,7,8,9,10 (2<n)
+
+2,3,4,5(2<n/2) best practice
+
+---------------------------------------
+
+prg 5:
+
+leap
+2020,2016,2012,2008,2004,2000,,2100
+
+if(year%4 && year%100)
+{
+sop(leap year)
+}
+
+----------------------------------------
+
+prg 6:
+
+153
+
+1+5+3 =9
+
+1+125+27=153
+
+153==153
+print(ams)
+else
+print(not ams)
+
+-----------------------------------------
+after that all program are task..
+
+
+
+
+
+

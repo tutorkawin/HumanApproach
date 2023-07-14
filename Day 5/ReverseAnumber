@@ -1,0 +1,14 @@
+class HelloWorld {
+    public static void main(String[] args) {
+        int n=1234;
+        int mod;
+        int d=0;
+        while(n>0)
+        {
+            mod=n%10;
+            d=d*10+mod;
+            n=n/10;
+        }
+        System.out.println(d);
+    }
+}

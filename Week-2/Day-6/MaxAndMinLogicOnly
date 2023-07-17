@@ -1,0 +1,22 @@
+Find the minimum and maximum element in an array
+
+int arr={7,9,0,2,8,5};
+
+left to right;
+
+
+max=a[0];
+min=a[0];
+
+
+for(int i=1;i<n;i++)
+{
+	if(max<a[i])
+	{
+		max=a[i];
+	}
+	if(min>a[i])
+	{
+		min=a[i];
+	}
+}

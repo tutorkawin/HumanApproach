@@ -1,0 +1,29 @@
+Write a program to sort the given array
+
+
+int arr[] = {7,9,0,2,8,5};
+
+0,9,7,2,8,5
+
+0,2,7,9,8,5
+
+0,2,5,9,8,7
+
+0,2,5,7,8,9
+
+for(int i=0;i<n;i++)
+{
+	for(int j=;j<n;j++)
+	{
+		if(a[i]>a[j])
+		{
+			int c=a[i];
+			a[i]=a[j];
+			a[j]=c;
+		}
+	}
+}
+
+
+o/p:
+[0,2,5,7,8,9]

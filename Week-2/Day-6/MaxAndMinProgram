@@ -1,0 +1,23 @@
+class MaxAndMin {
+    public static void main(String[] args) {
+        
+        int a[]={7,9,0,2,8,5};
+       int  max=a[0];
+        int min=a[0];
+        int n=a.length;
+        for(int i=1;i<n;i++)
+        {
+        	if(max<a[i])
+        	{
+        		max=a[i];
+        	}
+        	if(min>a[i])
+        	{
+        		min=a[i];
+        	}
+        }
+        System.out.println(min+","+max);
+    }
+}
+
+o/p: 0,9

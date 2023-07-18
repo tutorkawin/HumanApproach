@@ -1,0 +1,23 @@
+1)Find Two Max Numbers From an Array In Java
+
+int a[]={5,8,3,1,7,9};
+
+o/p:8,7
+
+
+1stmax=9
+2ndmax=8
+
+max1=a[0] //5
+max2=a[0] //5
+
+if(max1<a[i])
+{
+	max2=max1; //8
+	max1=a[i]; //9
+
+}
+else if (max1>a[i] && max2<a[i]) 5<7
+{
+	max2=a[i];
+}

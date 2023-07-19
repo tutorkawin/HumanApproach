@@ -1,0 +1,19 @@
+logic 1:
+
+for(int i=0,j=n.lenght-1;i<n.length;i++,j--)
+{
+	s.out(n[i][j]);
+}
+
+logic 2:
+
+for(int i=0;i<n.length;i++)
+{
+	for(int j=0;j<n[0].length;j++)
+	{
+		if(i+j==n.length-1)
+		{
+			s.out(n[i][j]);
+		}
+	}
+}

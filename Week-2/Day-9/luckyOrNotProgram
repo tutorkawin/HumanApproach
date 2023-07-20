@@ -1,0 +1,48 @@
+package hello;
+
+public class luckyOrNotProgram {
+
+	public static void main(String[] args) {
+		
+		int n=7710;
+		int temp=n;
+		int c=0;
+		System.out.println();
+		while(temp>0) 
+		{
+			temp=temp/10;
+			c++;
+		}
+		int digit=c/2;
+		int div=1;
+		
+		System.out.println("-->"+digit);
+		while(digit>0)
+		{
+			div=div*10;
+			digit--;
+		}
+		
+		
+		System.out.println(div);
+		System.out.println(n/div);
+		System.out.println(n%div);
+		int sod=n/div;
+		int sum =0,mod=0;
+		while(sod>0)
+		{
+			mod=sod%10;
+			sum+=mod;
+			sod=sod/10;
+		}
+		System.out.println("..."+sum);
+		if(sum==n%div)
+		{
+			System.out.println("lucky");
+		}
+		else
+		{
+			System.out.println("unlucky");
+		}
+	}
+}

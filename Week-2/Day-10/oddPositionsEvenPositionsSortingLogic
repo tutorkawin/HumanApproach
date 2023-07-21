@@ -1,0 +1,21 @@
+1. Write a program to sort the elements in odd positions in descending
+order and even  elements in ascending order
+
+Eg 1: Input: 13,2 4,15,12,10,5
+
+13,4,12,5
+
+4,5,12,13//even position
+i%2==0 and j%2==0
+then sorting for ascending oder
+
+2,15,10//odd position
+i%2==1 and j%2==1
+then sorting for decending order
+
+
+
+Output: 13,2,12,10,5,15,4
+
+Eg 2: Input: 1,2,3,4,5,6,7,8,9
+Output: 9,2,7,4,5,6,3,8,1

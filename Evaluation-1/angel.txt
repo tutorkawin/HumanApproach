@@ -1,0 +1,11 @@
+prg 2:
+	Cool all looking perfect. Your code is good as well. 
+	Good thinking ability.
+	one of the best solution for 2nd program
+
+prg 3:
+	Anyways you got output but try to do more efficent.otherwise eery thing is perfect.
+	In this case u can improvize your efficient in looping in this program.
+	I already said that don't use bulit in function. Don't repeat it again.
+	num = Integer.parseInt(Character.toString(myString.charAt(i)));
+	think the logic to check the without bulit-in function.

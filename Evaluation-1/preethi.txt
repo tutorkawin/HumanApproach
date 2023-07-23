@@ -1,0 +1,8 @@
+prg 4:
+
+	don't think very complexly. think logically you will find the easiest solution.
+	Anyway you got the output. Good thinking ability.
+	Do attempt more programs.
+	Your program will work correctly only for the square matrix. check why and change it.
+	1 program in 1.30hrs is not enough, try to improve Your time management 
+	keep on going..

@@ -1,0 +1,36 @@
+prg 1:
+	Cool all looking good. Your code is very efficient as well. 
+	Good thinking ability.
+	i have already said that dont declear the value instead use some opertion to to find the answer
+	your code should work for the all kind of input.
+	String s="kawinr";
+		int x=3;
+		int y=0;
+	again don't repeat this.
+
+prg 2:
+	Cool all looking perfect. Your code is good as well. 
+	Good thinking ability.
+	no need to give = , when you starts i as 0.
+	for(int i=0;i<=s.length();i++)
+
+prg 3:
+	In this case u can improvize your efficient in looping in this program.
+	I already said that don't use bulit in function. Don't repeat it again.
+	if(Character.isLetter(s.charAt(i)) && Character.isDigit(s.charAt(i+1)))
+	think the logic to check the without bulit-in function.
+
+prg 4:
+	All looking good. but {{1,2},{3,4},{5,6}} for this input you got array index out of bound. check it.
+
+prg 5:
+	yeah good approach.. also find the logic using comparing and swaping.., 
+	if incase you got questions like move the negative numbers to right side.
+	at the time you can't you a loop like which u used to store zero.
+	 while(count< n)
+	{
+		a[count]=0;
+		count++;
+	}
+
+kindly do proper intendation also..

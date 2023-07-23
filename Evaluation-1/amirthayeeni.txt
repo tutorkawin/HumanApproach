@@ -1,0 +1,23 @@
+prg 2:
+	Cool all looking perfect. Your code is good as well. 
+	Good thinking ability.
+	one of the best solution for 2nd program
+
+prg 1:
+	i got this error when i ran your code
+......
+.....i
+....in
+...inr..inrException in thread "main" java.lang.StringIndexOutOfBoundsException: String index out of range: 6
+at java.base/java.lang.StringLatin1.charAt(StringLatin1.java:47)
+at java.base/java.lang.String.charAt(String.java:693)
+	at HelloWorld.main(HelloWorld.java:19)
+
+	your started well the program but u missed some logic to print the "pro" as well. check and do it.
+
+
+
+		For your second submission code looks similar to vinodhini.
+		I'm not offending you, if you don't know or not understood the logic means you can ask yours frnds and then
+		try to do that yourself from what they have exxplained you or ask me i will help you to how to do this.
+

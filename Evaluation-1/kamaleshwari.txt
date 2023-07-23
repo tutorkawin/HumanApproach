@@ -1,0 +1,25 @@
+
+prg 1:
+	i got this error when i ran your code
+......g
+.....gr
+....gra
+...gram
+..gramException in thread "main" java.lang.StringIndexOutOfBoundsException: String index out of range: 7at java.base/java.lang.StringLatin1.charAt(StringLatin1.java:47)
+at java.base/java.lang.String.charAt(String.java:693)
+	at HelloWorld.main(HelloWorld.java:18)
+
+your started well the program but u missed some logic to print the "pro" as well. check and do it.
+
+prg 2:
+	Cool all looking perfect. Your code is good as well. 
+	Good thinking ability.
+	one of the best solution for 2nd program
+
+program 4:
+	Anyway you got output.
+	{{1,2},{3,4},{5,6}} for this input you got array index out of bound. check it.
+	very think did correct but except initialation of i,j variable change it.
+	other than that Your code is very efficient as well. 
+	Good thinking ability. 
+	keep on doing..

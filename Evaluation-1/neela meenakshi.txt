@@ -1,0 +1,13 @@
+prg 2:
+	Cool all looking perfect. Your code is good as well. 
+	Good thinking ability.
+	one of the best solution for 2nd program
+
+program 4:
+	Anyway you got output.
+	{{1,2},{3,4},{5,6}} for this input you got array index out of bound. check it.
+	very think did correct but except initialation of i,j variable change it.
+	other than that Your code is very efficient as well. 
+	Good thinking ability. 
+	keep on doing..
+

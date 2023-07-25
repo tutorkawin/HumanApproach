@@ -1,0 +1,22 @@
+public class AllPossibleSubStringProgram
+{
+	public static void main(String[] args) {
+		String str="kawina";
+        int n=str.length();
+        int k=0;
+        
+        for(int p=0;p<n;p++)
+        {
+            for(int i=p;i<n;i++)
+            {
+                for(int j=p;j<=i;j++)
+                {
+                    System.out.print(str.charAt(j));
+                }
+                System.out.println();
+                
+            }
+            System.out.println();
+        }
+	}
+}

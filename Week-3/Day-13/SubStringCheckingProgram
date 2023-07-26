@@ -1,0 +1,33 @@
+class SubStringChecking {
+    public static void main(String[] args) {
+        String str2 = "kwainwin";
+        String str1 = "win";
+        int flag=0,a=0;
+        for(int i=0;i<str1.length();i++)
+        {
+            for(int j=0;j<str2.length() ;j++)
+            {
+                if(str1.charAt(a)==str2.charAt(j))
+                {
+                    a++;
+                    flag++;
+                }
+                else
+                {
+                    a=0;
+                    flag=0;
+                }
+            }
+            if(flag==str1.length())
+            {
+                System.out.println("yes");
+                break;
+            }
+            else
+            {
+                System.out.println("no");
+            }
+        }
+        System.out.println(flag);   
+    }   
+}

@@ -1,0 +1,78 @@
+//c language 
+
+#include<stdio.h>
+int main()
+{
+    char a[10][10]={
+                    {'d','g','d','d','d','d'},
+                    {'k','e','d','d','d','g'},
+                    {'g','e','e','k','s','e'},
+                    {'d','k','d','s','k','e'},
+                    {'d','s','d','d','d','d'},
+                    {'g','e','e','k','s','d'}
+
+        };
+        char str[]="geeks";
+    int i,j,index,m,n,num=strlen(a),inc_var,count=0,times=0;
+
+    for(i=0;i<num;i++)
+    {
+        for(j=0;j<num ;j++)
+        {
+            inc_var=0;count=0;index=0;
+            if(a[i][j]==str[index])
+             {
+                m=i; //1
+                n=j; //3
+                count++;
+                index++;
+                inc_var++;
+                while(inc_var<strlen(str))
+                {
+                    if(a[m+1][n]==str[index])
+                    {
+                        index++;
+                        count++;
+                        m++;
+                        inc_var++;
+                    }
+                    else if(a[m][n+1]==str[index])
+                    {
+                        index++;
+                        count++;
+                        n++;
+                        inc_var++;
+                    }
+                    else if(a[m][n-1]==str[index])
+                    {
+                        index++;
+                        count++;
+                        n--;
+                        inc_var++;
+
+                    }
+                    else if(m!=0 )
+                    {
+			if(a[m-1][n]==str[index])
+			{
+
+                        index++;
+                        count++;
+                        m--;
+                        inc_var++;
+			}
+                    }
+                    else
+                        break;
+                }
+                if(count==strlen(str))
+                {
+
+                    times++;
+                }
+
+            }
+        }
+    }
+    printf("%d",times);
+}

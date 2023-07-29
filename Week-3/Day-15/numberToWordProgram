@@ -1,0 +1,85 @@
+package hello;
+
+public class numberToWord {
+
+	public static void main(String[] args) {
+		String ones[]={"one","two","three","four","five","six","seven","eight","nine"};
+        String teen[]={"elven","twelve","threeteen","fourteen","fiveteen","sixteen","seventeen","eightteen","nineteen"};
+        String tens[]={"ten","twenty","thrty","forty","fifty","sixty","seventy","eighty","ninty"};
+        
+        int n=25432;// 30234  25432
+        System.out.println("-->"+n);
+        int divd=1,dummyN=n,quo;
+        while (dummyN>0)
+        {
+            divd=divd*10;
+            dummyN=dummyN/10;
+        }
+         System.out.println("-->"+divd);
+        divd=divd/10;
+        System.out.println(divd);
+        while(n>0) //345
+        {
+            if(0<n && n<10)
+            {
+                System.out.print("."+ones[n-1]);
+                n=0;
+            }
+            else if(10<n && n<20)
+            {
+                quo=n%divd;
+                System.out.print(teen[quo-1]+" ");
+                // n=n%divd;
+                n=0;
+            }
+            else if(10<=n && n<100)
+            {
+                quo=n/divd;
+                System.out.print(tens[quo-1]);
+                n=n%divd;//5 1
+                divd=divd/10;
+            }
+            else if(100<=n && n<1000)//345 100
+            {
+                quo=n/divd;
+                System.out.print(ones[quo-1]+" hundred ");
+                n=n%divd;
+                divd=divd/10; //45 10
+            }
+            else if(1000<=n && n<10000)
+            {
+                quo=n/divd;
+                System.out.print(ones[quo-1]+" "+" thousand ");
+                n=n%divd;
+                divd=divd/10;
+            }
+            else if(10000<=n && n<100000)
+            {
+                if(10 < n/(divd/10) && n/(divd/10) <20 )
+                {
+                    quo=n/(divd/10);
+                    System.out.print(teen[quo-11]+"thousand ");
+                    divd=divd/10; //1000 345%100
+                    n=n%divd;
+                    divd=divd/10;
+                }
+                else if( (n/(divd/10) % 10) ==0 )
+                {
+                    quo=n/(divd);
+                    System.out.print(tens[quo-1]+" thousand");
+                    divd=divd/10;
+                    n=n%divd;
+                    divd=divd/10;
+                }
+                else
+                {		//25432
+                    quo=n/divd;
+                    System.out.print(tens[quo-1]+" ");
+                    n=n%divd;
+                    divd=divd/10;
+                }
+            }
+            
+        }
+	}
+}

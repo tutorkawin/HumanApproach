@@ -1,0 +1,66 @@
+package hello;
+import java.util.*;
+public class flamesProgram {
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+	     System.out.println("Enter your name: ");
+	    	StringBuilder sb1=new StringBuilder(sc.nextLine());
+		 System.out.println("Enter your crush: ");
+	    	StringBuilder sb2=new StringBuilder(sc.nextLine());
+			String name1=sb1.toString();
+		    String name2=sb2.toString();;
+			
+			  for(int i=0;i<sb1.length();i++)
+			  {
+				for(int j=0;j<sb2.length();j++)
+			     {  
+			        if(sb1.charAt(i)==sb2.charAt(j))
+					{
+				       sb1.deleteCharAt(i);
+					   sb2.deleteCharAt(j);
+					   break;
+					} 	
+				 }
+			  }
+			   
+				 String s1=sb1.toString();
+				 String s2=sb2.toString();
+				 String s3=s1.concat(s2);  			   
+				 
+				 int tot=s3.length();
+				 int count=tot-1;
+
+	              String flames="flames";
+				  while(flames.length()>1)
+			     {
+					 int index=count%flames.length();
+					 String temp1=flames.substring(index+1);
+					 String temp2=flames.substring(0,index);  //flames
+					 flames= temp1+temp2;
+				 }
+					 switch(flames)
+					    {
+							
+							case "f" :
+							  System.out.println(name1+" and "+name2+" you are a FRIEND");
+							  break;
+							case "l":
+							  System.out.println(name1+" and "+name2+" you are a LOVER");
+							  break;
+							  case "a" :
+							  System.out.println(name1+" and "+name2+" AFFECTION FOREVER");
+							  break;
+							case "e":
+							  System.out.println(name1+" and "+name2+" you are always ENEMY");
+							  break;
+							  case "m" :
+							  System.out.println(name1+" and "+name2+" you will be MARRY soon");
+							  break;
+							case "s":
+							  System.out.println(name1+" and "+name2+" you are a SIBLINGS");
+							  break;
+							
+						}
+	}
+}

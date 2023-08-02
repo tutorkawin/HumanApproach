@@ -1,0 +1,128 @@
+#include<stdio.h>
+void game(int m,int n,int a[10][10],char dr,int na)
+{
+
+    a[m][n]=1;
+    int I;
+    for(I=0;I<na;I++)
+    {
+        if(m>=0 && n>=0 && m<10 && n<10)
+        {
+
+
+        if(dr=='s')
+        {
+            m++;
+             if(m<10)
+            {
+                 if(a[m][n]==0)
+                {
+                    a[m][n]=1;
+                    dr='e';
+                }
+                else
+                {
+                    a[m][n]=0;
+                    dr='w';
+                }
+            }
+           
+        }
+        else if(dr=='e')
+        {
+            n++;
+            if(n<10)
+            {
+                 if(a[m][n]==0)
+                {
+                    a[m][n]=1;
+                    dr='n';
+    
+                }
+                else
+                {
+                    a[m][n]=0;
+                    dr='s';
+                }
+            }
+           
+        }
+        else if(dr=='n')
+        {
+            m--;
+            if(m>=0)
+            {
+                if(a[m][n]==0)
+                {
+                    a[m][n]=1;
+                    dr='w';
+                }
+                else
+                {
+                    a[m][n]=0;
+                    dr='e';
+                }
+            }
+            
+            
+            
+        }
+        else if(dr=='w')
+        {
+            n--;
+            if(n>=0)
+            {
+                if(a[m][n]==0)
+                {
+                    a[m][n]=1;
+                    dr='s';
+                }
+                else
+                {
+                    a[m][n]=0;
+                    dr='n';
+                }
+            }
+            
+        }
+        }
+        else{
+            break;
+        }
+    }
+
+    for(int x=0;x<10;x++)
+    {
+        for(int y=0; y<10;y++)
+        {
+            printf("%d ",a[x][y]);
+        }
+        printf("\n");
+    }
+
+    printf("-->%d %d %d %c",m,n,I,dr);
+
+}
+
+int main()
+{
+    int i,j,k,m,n,na,I;
+    int a[10][10];
+    i=4,j=4;
+    m=i,n=j;
+    char dr='s';
+    na=500;
+
+    for(int x=0;x<10;x++)
+    {
+        for(int y=0; y<10;y++)
+        {
+            a[x][y]=0;
+        }
+    }
+
+    game(m,n,a,dr,na);
+    printf("\n----------\n");
+    //game(1,1,a,dr,na);
+
+}

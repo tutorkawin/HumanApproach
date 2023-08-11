@@ -1,0 +1,150 @@
+#include<stdio.h>
+void printing(char card[],int n)
+{
+    int i=0,flag=0;
+    printf("[");
+    for( i=0;i<n;i++)
+    {
+        printf("%c ",card[i]);
+    }
+    printf("'%d']\n",i);
+}
+
+int remove1(char p2[],int x,int k)
+{
+    for(int i=x-1;i<k;i++)
+    {
+        p2[i]=p2[i+1];
+    }
+    k--;
+    return k;
+}
+void playerwincards(char p1[],char col[], int j,int index)
+{
+    int q=0;
+    for(int i=j;q<index;i++)
+    {
+            p1[i]=col[q++];
+    }
+}
+
+int game(char p1[],char p2[],char col[],int j,int k,int index,int temp[])
+{
+    int x;
+    printf("\nSELECT A POSITION PLAYER 1:     ");
+    printing(p1,j);
+    scanf("%d",&x);
+    col[index++]=p1[x-1];
+    //------------printing col
+    printf("COMBINED CARDS: ");
+    printing(col,index);
+    //----------------------removing player 1
+    j=remove1(p1,x,j);
+    temp[0]=j;
+    if (j==0)
+    {
+        printf("\n      PLAYER 2 WON \n\n     GAME OVER!!");
+        return j ;
+    }
+
+    //---------------------checks equal PLAYER 2 TO 1
+    if(col[index-1]==col[index-2])
+    {
+        printf("\nPLAYER 1 GOT CARDS....");
+        playerwincards(p1,col,j,index);
+        j=j+index;
+        temp[0]=j;
+        index=0;
+        col[0]='\0';
+        printf("\n|---------------|\n");
+        printing(p1,j);
+        printf("|---------------|\n");
+    }
+
+    printf("\nSELECT A POSITION PLAYER 2:     ");
+    printing(p2,k);
+    scanf("%d",&x);
+    col[index++]=p2[x-1];
+    //col[index]=p2[x-1];
+    //index++;
+    //---------------------col array printing
+    printf("COMBINED CARDS: ");
+    printing(col,index);
+    //----------------------removing player 2
+    k=remove1(p2,x,k);
+    temp[1]=k;
+    if (k==0)
+    {
+        printf("\n      PLAYER 1- WON       GAME OVER!!");
+        return 0;
+    }
+
+    if(col[index-1]==col[index-2])
+    {
+        //game(p1,p2,col,j,k,index,temp);
+        playerwincards(p2,col,k,index);
+        k=k+index;
+        index=0;
+        temp[1]=k;
+         col[0]='\0';
+        printf("\n---------------\n");
+        printf("PLAYER 2 GOT CARDS....");
+        printing(p2,k);
+        printf("---------------\n");
+    }
+    
+
+}
+
+
+
+int main ()
+{
+    int i,j=0,k=0,index=0,p11,p22,finish=1;
+    int temp[2]={26,26};
+    char p1[52];
+    char p2[52];
+    char col[52];
+    char card[52]={
+        'A','2','3','4','5','6','7','8','9','10','K','Q','J',
+        'A','2','3','4','5','6','7','8','9','10','K','Q','J',
+        'A','2','3','4','5','6','7','8','9','10','K','Q','J',
+        'A','2','3','4','5','6','7','8','9','10','K','Q','J'
+    };
+    int cardsize=sizeof(card)/sizeof(card[0]);
+    for(i=0;i<cardsize;i++)
+    {
+        if(i%2==0)
+        {
+            p1[j]=card[i];
+            j++;
+        }
+        else if(i%2==1)
+        {
+            p2[k]=card[i];
+            k++;
+        }
+    }
+    int p1size=sizeof(p1)/sizeof(p1[0]);
+    int p2size=sizeof(p2)/sizeof(p2[0]);
+    printf("TOTAL CARDS:\n");
+    printing(card,cardsize);
+    printf("PLAYEER 1:\n");
+    printing(p1,j);
+    printf("PLAYEER 2:\n");
+    printing(p2,k);
+    printf("\nGAME STARTZZZZZ:\n");
+    while(1)
+    {
+        finish=game(p1,p2,col,j,k,index,temp);
+        printf("hii");
+        if(temp[0]==0 || temp[1]==0)
+        {
+            break;
+        }
+        printf("-------%d------%d-----",temp[0],temp[1]);
+        j=temp[0];
+        k=temp[1];
+        index=0;
+    }
+}

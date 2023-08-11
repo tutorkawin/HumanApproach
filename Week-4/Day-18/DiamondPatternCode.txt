@@ -1,0 +1,109 @@
+#include<stdio.h>
+void printmonth(int I,int year)
+{
+    char monthname[][20]={"january","feubuary","march","april","may","june","july",
+    "august","september","october","november","december"};
+    printf("\n     %s-%d\n",monthname[I],year);
+
+}
+
+int calculateday(int year)
+{
+    int k=1;
+    int m=11;
+    int c=year-1,d=0,i=0,tens=1;
+    // while(i<2)
+    // {
+    //     int b=c%10;
+    //     d=d+b*tens;
+    //     tens=tens*10;
+    //     i++;
+    //     c=c/10;
+    // }
+    d=c%100;
+    c=c/100;
+    printf("%d %d",d,c);
+    int day=k+((13*m-1)/5)+d+(d/4)+(c/4)-2*c;
+    day=day%7;
+    if(day<=0)
+    {
+        day=day*(-1);
+        day=7-day;
+        return day;
+    }
+    else
+    {
+        return day;
+    }
+
+
+
+}
+
+void printarray(int m,int n,int month[m][n])
+{
+    printf("Mon Tue Wed Thu Fri Sat Sun\n");
+    for(int i=0;i<m;i++)
+    {
+        for(int j=0;j<n;j++)
+        {
+            if(month[i][j]>=0 && month[i][j]<10)
+            {
+                printf(" ");
+            }
+            printf("%d  ",month[i][j]);
+            month[i][j]=0;
+        }
+        printf("\n");
+    }
+}
+int main ()
+{
+    int k=5,x=1;
+    int monthdays[]={31,28,31,30,31,30,31,31,30,31,30,31};
+    int i,j,m=6,n=7,next,I=0,year;
+    int month[m][n];
+    printf("enter year:\n");
+    // year=2023;
+    scanf("%d",&year);
+    if(year%4==0)
+        monthdays[1]++;
+    k=calculateday(year)-1;
+    while(I<12)
+    {
+
+    for(i=0;i<m;i++)
+    {
+        for(j=0;j<n;j++)
+        {
+            if(x<=monthdays[I])
+            {
+                if(i==0)
+                {
+                    if(j>=k)
+                    {
+                        month[i][j]=x++;
+                    }
+                    else
+                        month[i][j]=0;
+                }
+                else
+                    month[i][j]=x++;
+                    next=j;
+            }
+            else
+            {
+                month[i][j]=0;
+            }
+        }
+    }
+    printmonth(I,year);
+    printarray(m,n,month);
+    k=next+1;
+
+    x=1;
+    I++;
+
+  }
+
+}
